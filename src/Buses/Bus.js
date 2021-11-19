@@ -54,7 +54,7 @@ const Bus = ({ ticketData }) => {
         <>
             <div className='busSeats'>
                 {seat.map((val, id) => {
-
+console.log("val",val);
 
                     return (<button className='whitebox' value={val} onClick={(e) => selectseat(e)} key={id} outline disabled={selectedSits?.includes(String(val))}  >{val}</button>)
                 })}
