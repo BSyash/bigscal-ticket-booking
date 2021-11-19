@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100% !important ;
+  height: 100vh !important;
+  background-image: url(http://www.volvobuses.com/content/dam/volvo/volvo-buses/markets/global/en-en/news/2018/1860x1050-Volvo-9900-Landscape-2018.jpg) !important;
+  /* background-image: linear-gradient(to right, lightblue , White); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App {
+  height: 100vh;
+}
+.logInForm {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logInForm form {
+  width: 100%;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+}
+.logInForm form p {
+  width: 100%;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 55px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.logInForm form input,
+.logInForm form button {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+.logInForm form button {
+  color: #fff;
+  background-color: #00adee;
+}
+.logInForm form button:hover {
+  background-color: #0078a5;
+}
+.ticketAndBus {
+  display: flex;
+}
+.userLogIn {
+  position: relative;
+  float: right;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.userLogIn span {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: hotpink;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.userLogIn button {
+  position: absolute;
+  left: -120px;
+}
+.userLogIn ~ button {
+  width: 100%;
+  max-width: 100px;
+  height: 40px;
+  background-color: #2196f3ba;
+  color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+}
+.table {
+  background-color: azure;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 700;
+}
+.whitebox {
+  margin: 5px;
+  padding: 0;
+  width: 245px;
+  height: 80px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid lightblue;
+}
+
+.whitebox:nth-child(0) {
+  background-color: #61dafb;
+}
+
+.greenbox {
+  background-color: green;
+  margin: 5px;
+  padding: 0;
+  width: 245px;
+  height: 80px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.busSeats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 785px;
+  margin-right: 47%;
+}
+.ticketBookingForm hr {
+  color: #fff;
+}
+.ticketBookingForm {
+  margin: 5px 20px;
+  width: 100%;
+  max-width: 200px;
+}
+.ticketBookingForm form {
+  display: flex;
+  flex-direction: column;
+}
+.ticketBookingForm form input,
+.ticketBookingForm form select,
+.seachSection input {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 8px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.ticketBookingForm form button {
+  width: 100%;
+  font-size: 18px;
+  margin: auto 30px auto 0;
+  height: 46px;
+  border: none;
+  outline: none;
+  color: aliceblue;
+  background-color: rgb(36, 139, 131);
+  border-radius: 10px;
+}
+.busSeats button:last-child {
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 46px;
+  border: none;
+  outline: none;
+  background-color: yellowgreen;
+  border-radius: 10px;
+}
+.busSeats button:last-child:hover {
+  color: #fff;
+  background-color: green;
+}
+.ticketBookingForm .allTicketData {
+  width: 100%;
+  text-align: center;
+  background-color: darkcyan;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.ticketBookingForm .allTicketData a {
+  color: #fff;
+  text-decoration: none;
+}
+.seachSection {
+  margin-top: 10px;
+}
+.seachSection button {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 8px;
+  color: #fff;
+  background-color: darkcyan;
+  border-radius: 10px;
+}
+.printAndback {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.printAndback button {
+  width: 100%;
+  max-width: 100px;
+  padding: 10px;
+  background-color: lightsteelblue;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+@media print {
+  #printPageButton {
+    display: none;
+  }
+  #price {
+    background-color: rgb(212, 195, 116);
+  }
+}
+/* reset */
+
+* {
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+/* content editable */
+
+*[contenteditable] {
+  border-radius: 0.25em;
+  min-width: 1em;
+  outline: 0;
+}
+
+*[contenteditable] {
+  cursor: pointer;
+}
+
+*[contenteditable]:hover,
+*[contenteditable]:focus,
+td:hover *[contenteditable],
+td:focus *[contenteditable],
+img.hover {
+  background: #def;
+  box-shadow: 0 0 1em 0.5em #def;
+}
+
+span[contenteditable] {
+  display: inline-block;
+}
+
+/* heading */
+
+h1 {
+  font: bold 100% sans-serif;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* table */
+
+table {
+  font-size: 75%;
+  table-layout: fixed;
+  width: 100%;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+th,
+td {
+  border-width: 1px;
+  padding: 0.5em;
+  position: relative;
+  text-align: left;
+}
+th,
+td {
+  border-radius: 0.25em;
+  border-style: solid;
+}
+th {
+  background: #eee;
+  border-color: #bbb;
+}
+td {
+  border-color: #ddd;
+}
+
+/* page */
+
+.showTickets {
+  font: 16px/1 "Open Sans", sans-serif;
+  overflow: auto;
+  padding: 0.5in;
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px auto;
+  cursor: default;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.showTicketsbody {
+  box-sizing: border-box;
+  height: 11in;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0.5in;
+  width: 8.5in;
+}
+.showTicketsbody {
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+}
+
+/* header */
+
+header {
+  margin: 0 0 3em;
+}
+header:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+header h1 {
+  background: #000;
+  border-radius: 0.25em;
+  color: #fff;
+  margin: 0 0 1em;
+  padding: 0.5em 0;
+}
+header address {
+  float: left;
+  font-size: 75%;
+  font-style: normal;
+  line-height: 1.25;
+  margin: 0 1em 1em 0;
+}
+header address p {
+  margin: 0 0 0.25em;
+}
+header span,
+header img {
+  display: block;
+  float: right;
+}
+header span {
+  margin: 0 0 1em 1em;
+  max-height: 25%;
+  max-width: 60%;
+  position: relative;
+}
+header img {
+  max-height: 100%;
+  max-width: 100%;
+}
+header input {
+  cursor: pointer;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* article */
+
+article,
+article address,
+table.meta,
+table.inventory {
+  margin: 0 0 3em;
+}
+article:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+article h1 {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+article address {
+  float: left;
+  font-size: 125%;
+  font-weight: bold;
+}
+
+/* table meta & balance */
+
+table.meta,
+table.balance {
+  float: right;
+  width: 36%;
+}
+table.meta:after,
+table.balance:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* table meta */
+
+table.meta th {
+  width: 40%;
+}
+table.meta td {
+  width: 60%;
+}
+
+/* table items */
+
+table.inventory {
+  clear: both;
+  width: 100%;
+}
+table.inventory th {
+  font-weight: bold;
+  text-align: center;
+}
+
+table.inventory td:nth-child(1) {
+  width: 26%;
+}
+table.inventory td:nth-child(2) {
+  width: 38%;
+}
+table.inventory td:nth-child(3) {
+  text-align: right;
+  width: 12%;
+}
+table.inventory td:nth-child(4) {
+  text-align: right;
+  width: 12%;
+}
+table.inventory td:nth-child(5) {
+  text-align: right;
+  width: 12%;
+}
+
+/* table balance */
+
+table.balance th,
+table.balance td {
+  width: 50%;
+}
+table.balance td {
+  text-align: right;
+}
+
+/* aside */
+
+aside h1 {
+  border: none;
+  border-width: 0 0 1px;
+  margin: 0 0 1em;
+}
+aside h1 {
+  border-color: #999;
+  border-bottom-style: solid;
+}
+
+/* javascript */
+
+.add,
+.cut {
+  border-width: 1px;
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.25em 0.5em;
+  float: left;
+  text-align: center;
+  width: 0.6em;
+}
+
+.add,
+.cut {
+  background: #9af;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(#00adee 5%, #0078a5 100%);
+  background-image: -webkit-linear-gradient(#00adee 5%, #0078a5 100%);
+  border-radius: 0.5em;
+  border-color: #0076a3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.333);
+}
+
+.add {
+  margin: -2.5em 0 0;
+}
+
+.add:hover {
+  background: #00adee;
+}
+
+.cut {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+}
+.cut {
+  -webkit-transition: opacity 100ms ease-in;
+}
+
+tr:hover .cut {
+  opacity: 1;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+  html {
+    background: none;
+    padding: 0;
+  }
+  body {
+    box-shadow: none;
+    margin: 0;
+  }
+  span:empty {
+    display: none;
+  }
+  .add,
+  .cut {
+    display: none;
+  }
+}
+
+@page {
+  margin: 0;
+}
